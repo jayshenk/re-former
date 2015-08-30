@@ -1,3 +1,18 @@
+<!-- RAILSY-ER FORM -->
+<%= form_for @user do |f| %>
+	<%= f.label :username, "Your user name here" %><br>
+	<%= f.text_field :username %><br>
+
+	<%= f.label :email %><br>
+	<%= f.text_field :email, value: "example@example.com" %><br>
+
+	<%= f.label :password %><br>
+	<%= f.password_field :password %><br><br>
+
+	<%= f.submit "Submit" %>
+<% end %>
+
+<!-- RAILSY FORM
 <%= form_tag("/users", method: "post") do %>
 	<%= label_tag(:username, "Username:") %><br>
 	<%= text_field_tag(:username) %><br>
@@ -7,9 +22,10 @@
 
 	<%= label_tag(:password, "Password:") %><br>
 	<%= password_field_tag(:password) %><br><br>
-	
+
 	<%= submit_tag("Submit") %>
 <% end %>
+-->
 
 <!-- HTML FORM
 <form action="/users" method="POST" accept-charset="UTF-8">
